@@ -1,0 +1,40 @@
+#include <iostream>
+
+using namespace std;
+
+class Texto{
+    string texto1;
+    int contador1=1;
+    public:
+    int numeroPalabras(string texto){
+        for (auto x : texto){ 
+            if (x == ' '){
+            contador1=contador1+1;}
+        }
+    return(contador1);}
+    static string arregloPalabras(int numero,string texto){
+        int contador2=0;
+        string arreglo[numero];
+        string palabratemp="";
+        for (auto x : texto){
+            if (x==' '){
+                arreglo[contador2]=palabratemp;
+                palabratemp="";
+                contador2=contador2+1;
+            }
+        }
+    return(arreglo);}
+};
+int main()
+{
+    /*string temporal;
+    cout<<"Ingrese un texto";
+    cin>>temporal;
+    Texto ob1;
+    int numer;
+    string arrayy;
+    numer=ob1.numeroPalabras(temporal);
+    arrayy=ob1.arregloPalabras(numer,temporal);
+    */
+    return 0;
+}
