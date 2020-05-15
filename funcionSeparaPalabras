@@ -5,19 +5,30 @@ class nueva{
     public:
     string arr[99999];
     int cont=0;
-    string* retornary(string a,string b, string c){
+    string* retornary(string texto){
         
-        arr[cont]=a;cont=cont+1;arr[cont]=b;cont=cont+1;
-        arr[cont]=c;cont=cont+1;
-        return(arr);
+        string word = ""; 
+        for (auto x : texto){ 
+            if (x == ' '){
+                arr[cont]=word;
+                cont=cont+1;
+                word = ""; 
+            } 
+            else{ 
+           word = word + x; 
+            } 
+        }  
+    arr[cont]=word; 
+    return(arr);
     }
     
 };
 int main() 
 { 
     nueva A;
-    string* arre=A.retornary("hola","que","tal");
+    string* arre=A.retornary("hola que tal");
     cout<<arre[1];
+    cout<<arre[0];
 
     return 0; 
 } 
