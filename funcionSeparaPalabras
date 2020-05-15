@@ -1,30 +1,23 @@
-
-// C++ program to print words in a sentence 
-#include <bits/stdc++.h> 
+#include <iostream>
 using namespace std; 
   
-void removeDupWord(string str) 
-{ 
-   string word = ""; 
-   for (auto x : str) 
-   { 
-       if (x == ' ') 
-       { 
-           cout << word << endl; 
-           word = ""; 
-       } 
-       else
-       { 
-           word = word + x; 
-       } 
-   }  
-   cout << word << endl; 
-} 
-  
-// Driver function 
+class nueva{
+    public:
+    string arr[99999];
+    int cont=0;
+    string* retornary(string a,string b, string c){
+        
+        arr[cont]=a;cont=cont+1;arr[cont]=b;cont=cont+1;
+        arr[cont]=c;cont=cont+1;
+        return(arr);
+    }
+    
+};
 int main() 
 { 
-    string str = "Geeks for Geeks"; 
-    removeDupWord(str); 
+    nueva A;
+    string* arre=A.retornary("hola","que","tal");
+    cout<<arre[1];
+
     return 0; 
 } 
