@@ -1,4 +1,5 @@
 #include <iostream>
+
 using namespace std; 
   
 class nueva{
@@ -19,22 +20,23 @@ class nueva{
             } 
         }  
     arr[cont]=word; 
-    static tamagnoarr=cont;
+
     return(arr);
     }
-    
 };
-
-class Verbos{
+class Verbos:public nueva{
     public:
     string infinitivos[999];
     string conj_pasado[999];
     string conj_presente[999];
     string conj_futuro[999];
-    contPasado=0;contPresente=0;contFuturo=0;
+    int contPasado=0;int contPresente=0;int contFuturo=0;int contInfinitivos=0;
     Verbos(string arreglo){
-        for (int i=0;i<tamagnoarr;i++){
-            if
+        for (int i=0;i<9999;i++){
+            if(arreglo[i].back()=='i'){
+                infinitivos[contInfinitivos]=arreglo[i];
+                contInfinitivos=contInfinitivos+1;
+            }
         }
     }
 };
@@ -44,6 +46,5 @@ int main()
     string* arre=A.retornary("hola que tal");
     cout<<arre[1];
     cout<<arre[0];
-
     return 0; 
 } 
